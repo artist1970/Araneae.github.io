@@ -140,12 +140,53 @@ h2{font-size:clamp(34px,5vw,62px);font-weight:400;letter-spacing:.035em;margin:1
   margin-top:20px;padding:15px 17px;border:1px solid rgba(215,173,98,.19);background:#081017;
   color:#8f9ba1;font-family:Arial,sans-serif;font-size:10px;line-height:1.7;text-align:center
 }
+
+.beta-shell{
+  position:relative;overflow:hidden;
+  max-width:1221px;margin:auto;
+  padding:33px;
+  border:1px solid var(--line);
+  border-radius:21px;
+  background:
+    radial-gradient(circle at 50% 0%,rgba(215,173,98,.10),transparent 33%),
+    linear-gradient(180deg,#0d1820,#091117);
+  box-shadow:0 33px 88px rgba(0,0,0,.33)
+}
+.beta-badge{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:7px 11px;border:1px solid rgba(142,200,160,.44);
+  border-radius:999px;color:#bfe1ca;background:rgba(142,200,160,.06);
+  font:700 11px/1 Arial,sans-serif;letter-spacing:.11em;text-transform:uppercase
+}
+.beta-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:33px;align-items:start;margin-top:24px}
+.beta-copy h3{font-size:33px;font-weight:400;margin:11px 0 14px;color:var(--ivory)}
+.beta-copy p{font-family:Arial,sans-serif;color:#b9c2c7;line-height:1.8;font-size:14px}
+.beta-features{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin:24px 0}
+.beta-feature{padding:14px;border:1px solid rgba(215,173,98,.20);border-radius:7px;background:rgba(5,12,17,.55)}
+.beta-feature strong{display:block;color:#ecd39f;font-size:14px;font-weight:400}
+.beta-feature span{display:block;margin-top:7px;color:#98a5ab;font:11px/1.55 Arial,sans-serif}
+.beta-actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:24px}
+.beta-button{
+  display:inline-flex;align-items:center;justify-content:center;min-height:44px;
+  padding:11px 24px;border:1px solid var(--gold);border-radius:7px;
+  text-decoration:none;font:700 11px/1 Arial,sans-serif;letter-spacing:.10em;text-transform:uppercase
+}
+.beta-button.primary{background:var(--gold);color:#10171c}
+.beta-button:hover{border-color:var(--gold2);background:var(--gold2);color:#10171c}
+.beta-panel{padding:24px;border:1px solid rgba(215,173,98,.22);border-radius:21px;background:#081017}
+.beta-panel h4{font-size:24px;font-weight:400;margin:0 0 14px;color:#ead8b4}
+.beta-panel ol{margin:0;padding-left:24px;color:#aeb8bd;font:11px/1.8 Arial,sans-serif}
+.beta-panel li+li{margin-top:7px}
+.beta-note{margin-top:14px;padding:14px;border-left:1px solid var(--safe);background:rgba(142,200,160,.05);color:#aeb8bd;font:11px/1.7 Arial,sans-serif}
+.beta-privacy{margin-top:24px;text-align:center;color:#8f9ba1;font:11px/1.7 Arial,sans-serif}
+
 footer{border-top:1px solid rgba(215,173,98,.13);padding:35px 0 48px;text-align:center;color:#7f8b91;font-family:Arial,sans-serif;font-size:10px;letter-spacing:.09em}
 @media (max-width:900px){
   .about-grid{grid-template-columns:1fr}
   .spyder-grid{grid-template-columns:repeat(2,1fr)}
   .status-grid{grid-template-columns:repeat(2,1fr)}
   .layers{grid-template-columns:repeat(2,1fr)}
+  .beta-grid{grid-template-columns:1fr}
 }
 @media (max-width:620px){
   nav{display:none}
@@ -155,6 +196,10 @@ footer{border-top:1px solid rgba(215,173,98,.13);padding:35px 0 48px;text-align:
   .spyder-grid,.status-grid,.layers,.principles{grid-template-columns:1fr}
   .iron-content{padding:24px 18px}
   .iron-shell img{min-height:680px}
+  .beta-shell{padding:24px 14px}
+  .beta-features{grid-template-columns:1fr}
+  .beta-actions{flex-direction:column}
+  .beta-button{width:100%}
 }
 @media (prefers-reduced-motion:no-preference){
   .hero-frame{animation:float 8s ease-in-out infinite}
@@ -174,6 +219,7 @@ footer{border-top:1px solid rgba(215,173,98,.13);padding:35px 0 48px;text-align:
       <a href="#family">Spyders</a>
       <a href="#dome">Iron Dome</a>
       <a href="#status">Status</a>
+      <a href="#beta">Desktop Beta</a>
     </nav>
   </div>
 </header>
@@ -273,6 +319,57 @@ footer{border-top:1px solid rgba(215,173,98,.13);padding:35px 0 48px;text-align:
         <div class="stat"><strong>Private</strong><span>CORE Boundary</span></div>
         <div class="stat"><strong>Approval</strong><span>High-Impact Actions</span></div>
         <div class="stat"><strong>Sanitized</strong><span>Public Export</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="beta">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Public Beta Program</div>
+        <h2>Try Araneae on your own Mac.</h2>
+        <p>Araneae Desktop brings the diagnostic side of the protective web onto the computer itself, with readable health reports, graduated scan depths, maintenance scheduling, and a direct Beta feedback doorway.</p>
+      </div>
+
+      <div class="beta-shell">
+        <span class="beta-badge">β · Araneae Desktop 0.4.0</span>
+        <div class="beta-grid">
+          <div class="beta-copy">
+            <h3>A calmer way to understand your computer.</h3>
+            <p>The current macOS Beta is designed as a read-only diagnostic companion. It observes system health signals and creates local reports without automatically changing, deleting, quarantining, or repairing files.</p>
+
+            <div class="beta-features">
+              <div class="beta-feature"><strong>Quick Scan</strong><span>A lightweight health check for a fast overview.</span></div>
+              <div class="beta-feature"><strong>Deep Scan</strong><span>A broader diagnostic review with detailed findings.</span></div>
+              <div class="beta-feature"><strong>Forensic Scan</strong><span>A more extensive evidence-oriented diagnostic pass.</span></div>
+              <div class="beta-feature"><strong>Maintenance</strong><span>Schedule recurring health reports from the Control Center.</span></div>
+              <div class="beta-feature"><strong>Readable Reports</strong><span>Clean local HTML and JSON records you can review yourself.</span></div>
+              <div class="beta-feature"><strong>Beta Feedback</strong><span>Report bugs, usability issues, diagnostic concerns, and ideas.</span></div>
+            </div>
+
+            <div class="beta-actions">
+              <a class="beta-button primary" href="downloads/Araneae_Desktop_Beta_0_4_0_Mac_Public.zip" download>Download Mac Beta</a>
+              <a class="beta-button" href="#beta-first-launch">First-Launch Help</a>
+            </div>
+          </div>
+
+          <aside class="beta-panel" id="beta-first-launch">
+            <h4>First launch on macOS</h4>
+            <ol>
+              <li>Download and unzip the Beta package.</li>
+              <li>Read <strong>00 START HERE - Araneae Q&amp;A.txt</strong>.</li>
+              <li>Open <strong>Launch Araneae.command</strong>.</li>
+              <li>If macOS blocks it, choose <strong>Done</strong>.</li>
+              <li>Open <strong>System Settings → Privacy &amp; Security</strong>.</li>
+              <li>Scroll to Security and choose <strong>Open Anyway</strong> for Araneae.</li>
+              <li>Authenticate with your password or Touch ID if requested.</li>
+              <li>Return to the package and launch Araneae again.</li>
+            </ol>
+            <div class="beta-note"><strong>Do not disable Gatekeeper.</strong><br>“Open Anyway” approves this specific Beta while preserving the Mac's normal security protections.</div>
+          </aside>
+        </div>
+
+        <div class="beta-privacy"><strong>Beta boundary:</strong> Araneae Desktop 0.4.0 is experimental diagnostic software, not a replacement for a certified antivirus or professional incident-response service. Diagnostic contents are not attached to Beta feedback by default.</div>
       </div>
     </div>
   </section>
