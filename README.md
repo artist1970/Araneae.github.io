@@ -1,17 +1,21 @@
 # Araneae.github.io
 
-Public front door for **Araneae and Her Spyders**.
+Sanitized public front door for **Araneae — Keeper of the Living Web**.
 
-## Local assets used
+## Public boundary
+
+This repository is a presentation surface only. It introduces Araneae’s purpose, observer families, and constitutional principles without publishing operational details.
+
+It must not contain credentials, tokens, private records, raw findings, privileged routes, protected topology, internal repository inventories, private governance files, or operational controls.
+
+## Local assets
 
 - `assets/Araneae-hero.png`
 - `assets/araneae-matriarch.png`
 - `assets/araneae-global.png`
 
-## Architecture
+## Design rule
 
-- Public front: `artist1970/Araneae.github.io`
-- Private CORE: `artist1970/CORE/AraneaeCore`
-- Protected runtime: `KhaemenesAcademy/MAVRIC.github.io/SPYDERS`
+**Araneae’s public presence explains the web. It does not operate the web.**
 
-This public repository must never contain private CORE files, credentials, MFA secrets, signing keys, recovery secrets, or privileged repository tokens.
+© 2026 Jennifer Kay Pearl. All rights reserved.
