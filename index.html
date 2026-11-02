@@ -22,11 +22,18 @@
 .portrait img{height:auto;aspect-ratio:auto;object-fit:contain;object-position:center}
 @media(max-width:860px){.links{display:none}.intro-grid,.status-panel{grid-template-columns:1fr}.families{grid-template-columns:1fr 1fr}.portrait{max-width:560px}.section{padding:78px 0}.hero-content{padding-bottom:62px}}@media(max-width:560px){.shell{width:min(100% - 24px,1180px)}.hero h1{font-size:clamp(4rem,23vw,6rem)}.families,.principles{grid-template-columns:1fr}.hero-actions{display:grid}.btn{width:100%}.footer-inner{display:grid}.status-panel{padding:20px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Page-owned content only; official ecosystem components retain their own typography. */
+main{font-size:16px;line-height:1.65}
+main :is(p,li,label,input,textarea,select,button,a,small,.eyebrow,.kicker){font-size:16px}
+main h1{font-size:clamp(44px,7vw,88px)}
+main :is(.eyebrow,.kicker){letter-spacing:.12em}
+footer{background:#142432;color:#f6f0e6;font-size:16px}
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="nav"><div class="shell nav-inner"><a class="brand" href="#top" aria-label="Araneae home"><span class="sigil" aria-hidden="true">A</span><span class="brand-copy"><strong>ARANEAE</strong><small>Keeper of the Living Web</small></span></a><nav class="links" aria-label="Primary"><a href="#meet">Meet Araneae</a><a href="#web">The Web</a><a href="#principles">Principles</a><a href="#status">Public Boundary</a></nav></div></header>
+
 <main id="main">
   <section class="hero" id="top" aria-labelledby="heroTitle"><div class="hero-media"><img src="assets/araneae-matriarch.png" alt="Araneae centered within a luminous web of watchful mechanical spiders"></div><div class="shell hero-content"><div class="hero-copy"><div class="eyebrow">A calm watch across the visible web</div><h1 id="heroTitle">Araneae<span>Observe clearly · respond wisely</span></h1><p>She gathers the quiet signals of a changing digital world and brings them into relationship—without mistaking discovery for authority.</p><div class="hero-actions"><a class="btn primary" href="#meet">Enter the web</a><a class="btn ghost" href="#principles">Read the principles</a></div></div></div></section>
 
@@ -40,5 +47,11 @@
 </main>
 <footer class="footer"><div class="shell footer-inner"><span>Araneae · Verve N Veda</span><span>Observation never grants authority</span><span>© 2026 Jennifer Kay Pearl</span></div></footer>
 <script src="https://vervenveda.com/assets/vnv-ecosystem-toolbar.js"></script>
+
+<script src="https://vervenveda.com/assets/vnv-header-autopopulate.js"></script>
+<script>VNV_HEADER.mount({title:"Araneae",subtitle:"Khaemenes Academy · AI Mentor",home:"https://vervenveda.com/"});</script>
+<script src="https://vervenveda.com/assets/vnv-ticker-autopopulate.js"></script>
+<script>VNV_TICKER.autoPopulate({label:"Araneae · Quick Links",max:14});</script>
+<script src="https://vervenveda.com/assets/vnv-333-ticker.js"></script>
 </body>
 </html>
